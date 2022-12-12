@@ -9,7 +9,13 @@ import { AlertController } from '@ionic/angular';
 })
 export class AuthGuard implements CanActivate {
   constructor(private router: Router, private auth: AuthService, private alertCtrl: AlertController) { }
-
+/**
+ *
+ * @param route
+ *
+ * first commit 
+ * @returns
+ */
   canActivate(route: ActivatedRouteSnapshot): Observable<boolean> {
     return this.auth.user.pipe(
       take(1),
